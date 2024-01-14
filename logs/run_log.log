@@ -1,0 +1,89 @@
+Net(
+  (attr_net): Net(
+    (driverID_em): Embedding(24000, 16)
+    (weekID_em): Embedding(7, 3)
+    (timeID_em): Embedding(1440, 8)
+  )
+  (spatio_temporal): Net(
+    (geo_conv): Net(
+      (state_em): Embedding(2, 2)
+      (process_coords): Linear(in_features=4, out_features=16, bias=True)
+      (conv): Conv1d(16, 32, kernel_size=(3,), stride=(1,))
+    )
+    (rnn): LSTM(61, 128, num_layers=2, batch_first=True)
+    (attr2atten): Linear(in_features=28, out_features=128, bias=True)
+  )
+  (entire_estimate): EntireEstimator(
+    (input2hid): Linear(in_features=156, out_features=128, bias=True)
+    (residuals): ModuleList(
+      (0-2): 3 x Linear(in_features=128, out_features=128, bias=True)
+    )
+    (hid2out): Linear(in_features=128, out_features=1, bias=True)
+  )
+  (local_estimate): LocalEstimator(
+    (input2hid): Linear(in_features=128, out_features=64, bias=True)
+    (hid2hid): Linear(in_features=64, out_features=32, bias=True)
+    (hid2out): Linear(in_features=32, out_features=1, bias=True)
+  )
+)
+[('task', 'train'), ('batch_size', 10), ('epochs', 10), ('weight_file', None), ('result_file', './result/deeptte.res'), ('kernel_size', 3), ('pooling_method', 'attention'), ('alpha', 0.0), ('log_file', 'run_log')]
+Training Epoch 0, File train_00, Loss 0.312793958083623
+Training Epoch 0, File train_01, Loss 0.33031428114821515
+Training Epoch 0, File train_02, Loss 0.31609271489497687
+Training Epoch 0, File train_03, Loss 0.30008842264198593
+Evaluate File train_04, Loss 0.38806875012815
+Save weight file run_log_0.pth
+Training Epoch 1, File train_00, Loss 0.2497655609415637
+Training Epoch 1, File train_01, Loss 0.23178637518237036
+Training Epoch 1, File train_02, Loss 0.20998430639091464
+Training Epoch 1, File train_03, Loss 0.19102889088292915
+Evaluate File train_04, Loss 0.27759449287421173
+Save weight file run_log_1.pth
+Training Epoch 2, File train_00, Loss 0.1743312430775
+Training Epoch 2, File train_01, Loss 0.1694812787282798
+Training Epoch 2, File train_02, Loss 0.15836923170006936
+Training Epoch 2, File train_03, Loss 0.15329418136841721
+Evaluate File train_04, Loss 0.23278045575651857
+Save weight file run_log_2.pth
+Training Epoch 3, File train_00, Loss 0.14732938395399187
+Training Epoch 3, File train_01, Loss 0.142249382701185
+Training Epoch 3, File train_02, Loss 0.13743837940403156
+Training Epoch 3, File train_03, Loss 0.13426775295908253
+Evaluate File train_04, Loss 0.20512590816037524
+Save weight file run_log_3.pth
+Training Epoch 4, File train_00, Loss 0.13186555750047166
+Training Epoch 4, File train_01, Loss 0.12836522788016333
+Training Epoch 4, File train_02, Loss 0.12352108088218504
+Training Epoch 4, File train_03, Loss 0.12166233775723312
+Evaluate File train_04, Loss 0.20684950035065414
+Save weight file run_log_4.pth
+Training Epoch 5, File train_00, Loss 0.12042400863332053
+Training Epoch 5, File train_01, Loss 0.1184411223563883
+Training Epoch 5, File train_02, Loss 0.11212477596062753
+Training Epoch 5, File train_03, Loss 0.11236988764463199
+Evaluate File train_04, Loss 0.20246167810012897
+Save weight file run_log_5.pth
+Training Epoch 6, File train_00, Loss 0.11076357265313466
+Training Epoch 6, File train_01, Loss 0.11076595201674434
+Training Epoch 6, File train_02, Loss 0.10857535123618113
+Training Epoch 6, File train_03, Loss 0.106135623741688
+Evaluate File train_04, Loss 0.22092131051338382
+Save weight file run_log_6.pth
+Training Epoch 7, File train_00, Loss 0.10832503118241826
+Training Epoch 7, File train_01, Loss 0.10383174875751137
+Training Epoch 7, File train_02, Loss 0.102481531807118
+Training Epoch 7, File train_03, Loss 0.1021399987861514
+Evaluate File train_04, Loss 0.2043371149028341
+Save weight file run_log_7.pth
+Training Epoch 8, File train_00, Loss 0.10074674347415566
+Training Epoch 8, File train_01, Loss 0.09802481105240683
+Training Epoch 8, File train_02, Loss 0.09738807263266709
+Training Epoch 8, File train_03, Loss 0.09581006463203165
+Evaluate File train_04, Loss 0.20521016085727348
+Save weight file run_log_8.pth
+Training Epoch 9, File train_00, Loss 0.0965408115595993
+Training Epoch 9, File train_01, Loss 0.09471787190478709
+Training Epoch 9, File train_02, Loss 0.0916335099376738
+Training Epoch 9, File train_03, Loss 0.09311783850813905
+Evaluate File train_04, Loss 0.21367284550021093
+Save weight file run_log_9.pth
