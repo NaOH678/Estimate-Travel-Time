@@ -231,7 +231,7 @@ $$
 
 经过回归分析，可以初步确定提取出上述变量加入模型。**Attribute Layer**结构如下：
 
-<img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113222317899.png" alt="image-20240113222317899" style="zoom:33%;" />
+<img width="278" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/8d57d16a-c777-4602-b9ed-1fe753716e31">
 
 将上述几个变量先进行embedding。然后进行拼接，输出结果。
 
@@ -291,7 +291,9 @@ class Net(nn.Module):
 - 挑战：**时空关系的挖掘**。轨迹数据包含了丰富的时空关系，如何将他们提取出来进行时间预测。这也是传统方法没有考虑的因素。
 - 对策：**构建一个Geo-Con模块**。构建Geo-Conv Layer提取时空关系；构建循环神经网络LSTM，提取时间依赖。
 
-<img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240114161835079.png" alt="image-20240114161835079" style="zoom:33%; float:left"  />                                     <img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240114162043789.png" alt="image-20240114162043789" style="zoom:25%;" />        
+<img width="414" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/a839c236-68c6-4128-9b7c-607f88f84982">
+                                    <img width="320" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/03c31d9e-c260-4e89-85ff-38550eefdb37">
+        
 
 根据左边的图可以看到，现将轨迹点映射到成为一个更高维度的向量，然后在这个更高维度的向量上进行卷积，最后添加的绿色的就是在上一个环节中`out_size(self)`有个`sz+1`的代码，目的就在于此。所以最后提取出的信息包括轨迹点之间的信息和距离信息作为右图中蓝色的模块（作为空间关系）与红色的（即上一环节中的输出）进行拼接。然后在输入到LSTM中去捕获时间依赖。
 
