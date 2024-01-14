@@ -130,7 +130,8 @@ $$
 
 本项目的整体示意图如下：
 
-![image-20240114175757491](/Users/naoh/Library/Application Support/typora-user-images/image-20240114175757491.png)
+<img width="898" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/3fd6f484-5302-471f-88a7-54c30066ceca">
+
 
 - 首先将轨迹数据输入搭建好的**地理卷积层**中，获取**空间依赖信息**；
 - 使用**特征提取层**将**(行驶状态、路段长度、司机ID、开始时间、星期、日期)**进行Embedding；、
