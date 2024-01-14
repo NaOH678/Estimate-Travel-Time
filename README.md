@@ -220,7 +220,8 @@ $$
 
 根据p值和置信区间对结果进行分析，如果p值小于0.05或置信区间不包含0，则表示该变量是显著的。
 
-<img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113221156343.png" alt="image-20240113221156343" style="zoom:50%;float:left" /><img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113221232437.png" alt="image-20240113221232437" style="zoom:45%;" />     
+<img width="274" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/33c7c054-3cea-4580-9927-dd131e0ed285">       <img width="353" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/42dbf99e-238a-444a-a685-977eeac5d2d6">
+ 
 
 
 
