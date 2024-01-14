@@ -539,7 +539,8 @@ class LocalEstimator(nn.Module):
 因为文件大小的问题，没有上传data。
 
 ## 参考文献
-[1]When Will You Arrive? Estimating Travel Time Based on Deep Neural 	Networks.2018.KDD
+[1]When Will You Arrive? Estimating Travel Time Based on Deep Neural 	Networks.2018.KDD 
+
 [2]When Will You Arrive? Estimating Travel Time Based on Deep Neural 	Networks.2020. 
 
 
