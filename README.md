@@ -51,10 +51,8 @@ ETA有着广泛的下游应用，与我们的生活密切相关。所以如果�
 ### 轨迹
 
 给定轨迹
-$
-T = \{p_1, p_2, \cdots, p_{|T|}\}，
-$
-其中|T|是该点中包含轨迹点的数量。每一个轨迹点$p_i$包括三个部分组成,分别是**经度，纬度，时间戳**$p_i.{lat}，p_i.{lng}，p_i.{ts}$。
+<img width="662" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/a2c31c51-75a6-4ac4-b7c0-2cc13922706a">
+
 
 
 
@@ -172,35 +170,7 @@ $
 
 **案例分析主要是以探索为主，过程存在一些主观性。并且没能很好的控制变量。所以考虑构建一个关于旅行时间的回归方程。**
 
-现有样本矩阵$X \in \R^{n\times p}$，回归系数$\beta \in \R^{p}$，响应变量为旅行时间$Y$:
-$$
-Y = X\beta + \epsilon
-$$
-
-$$
-\begin{align}
-\begin{array}{c}
-\beta = (\beta_1, \beta_2, \cdots, \beta_p)'
-\end{array}\quad X = \left(\begin{array}{c c}
-
-x_{11} &x_{12} &\cdots &x_{1p} \\
-x_{21} &x_{22} &\cdots &x_{2p} \\
-\vdots &\vdots &\vdots &\vdots \\
-x_{np} &x_{n2} &\cdots &x_{np}
-
-\end{array}
-\right) \tag{}
-
-
-\end{align}
-$$
-
-
-
-利用最小二乘回归求的回归系数的估计:
-$$
-\hat{\beta} = (X'X)^{-1}X'Y
-$$
+<img width="682" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/147da495-7524-48dc-9bb9-1ade2a70b4ef">
 
 
 
@@ -371,9 +341,8 @@ class Net(nn.Module):
 <img width="754" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/f64a836e-b0ea-46a8-ac6a-f12e9ad0056c">
 
 蓝色和红色时前两个模块得到的特征，紫色模块时输出的时间。`R-k`表示第$k$段输出的时间，分别与对应的每一段真实时间做差求得损失，这部分的损失称为**分段损失**；`r-end`表示的是整条轨迹的损失，称为总体损失。定义模型的损失为
-$$
-Loss = \alpha\times subLoss + (1-\alpha)\times entireLoss \label{4}
-$$
+<img width="675" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/1f682d4c-a786-4061-9c08-030b859bf4ff">
+
 然后进行梯度回传，学习参数。
 
 相关代码
@@ -468,9 +437,8 @@ class LocalEstimator(nn.Module):
 ### 评估指标
 
 **平均绝对百分比误差（MAPE）**
-$$
-MAPE = \frac{1}{n}\sum_{i=1}^n\frac{|t_i - \hat{t_i}|}{|t_i|}
-$$
+<img width="696" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/46febc27-5e0b-4b83-b4b2-459fa9bd8a58">
+
 
 
 ### 对比实验
