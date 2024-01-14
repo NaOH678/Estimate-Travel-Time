@@ -368,7 +368,7 @@ class Net(nn.Module):
 - 挑战：**整体预测与分段预测**。常用的方法是**整个路径预测时间**或者是将**路径分成子路径预测时间最后求和**。但是两者各有千秋。整体预测会忽略道路之间的连接、红绿灯、转向问题；但是分段预测能较好的估计每一段的时间，但是会忽略分段之间的联系。
 - 对策：**加权损失函数**。构建一个损失函数，计算损失的方法是是对**分段预测时间的损失**与**整体预测时间的损失**的加权求和。
 
-<img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240114164515248.png" alt="image-20240114164515248" style="zoom:40%;" />
+<img width="754" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/f64a836e-b0ea-46a8-ac6a-f12e9ad0056c">
 
 蓝色和红色时前两个模块得到的特征，紫色模块时输出的时间。`R-k`表示第$k$段输出的时间，分别与对应的每一段真实时间做差求得损失，这部分的损失称为**分段损失**；`r-end`表示的是整条轨迹的损失，称为总体损失。定义模型的损失为
 $$
@@ -513,7 +513,8 @@ $$
 
   再次回到公式$\refeq{4}$
 
-  <img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240114174834679.png" alt="image-20240114174834679" style="zoom:33%;" />
+  <img width="292" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/e18a5031-8b6e-4f1a-8dc0-16f2da674620">
+
 
 不断调整$\alpha$的取值来探究加权损失函数的作用。
 
