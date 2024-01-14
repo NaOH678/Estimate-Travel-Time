@@ -534,9 +534,13 @@ class LocalEstimator(nn.Module):
 
 总体而言，本次课程设计收获颇丰。不仅了解了旅行时间预测的相关知识，也学习到了一些科研的基本思路。同时体验了深度学习完整的代码框架。
 
-最后感谢老师、助教和评委学长提供的宝贵建议。特别感谢杨苗苗学姐的帮助！
+最后感谢老师、助教和评委学长提供的宝贵建议。特别感谢ymm学姐的帮助！
+
+因为文件大小的问题，没有上传data。
+
+## 参考文献
+[1]When Will You Arrive? Estimating Travel Time Based on Deep Neural 	Networks.2018.KDD
+[2]When Will You Arrive? Estimating Travel Time Based on Deep Neural 	Networks.2020. 
 
 
-
-代码存放在了我的仓库中
 
