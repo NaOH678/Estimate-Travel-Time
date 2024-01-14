@@ -152,7 +152,8 @@ $$
 
 1. 验证**路径对旅行时间的影响**，选取两条路程都为3.21KM左右的轨迹，出发时间相似，距离市中心的路程也比较相似。但是他们的旅行时间差异比较大。黄色路径的行程用时1087s；橙色行程用时840s。
 
-​                         <img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113211143633.png" alt="image-20240113211143633" style="zoom: 33%; float:left" /><img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113211752768.png" alt="image-20240113211752768" style="zoom:33%; float:center" /><img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113211958234.png" alt="image-20240113211958234" style="zoom:33%; float:right" />
+​                         <img width="204" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/3c0c05e9-2d3a-4b38-9b9c-3a8122f00442"><img width="275" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/8fdb338d-f7e8-4e10-b9e9-90c76c551f03"><img width="292" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/f6cb8d28-1521-4398-b13a-3cffbcdef2d3">
+
 
 说明了路径对旅行时间的影响是很大的，我们需要学习不同路径的特征进行时间预测。
 
