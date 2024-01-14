@@ -27,7 +27,8 @@
 
 从某一个时刻出发，预测到达目的地的时间。
 
- <img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113193247991.png" alt="image-20240113193247991" style="zoom:25%;" />
+ ![image](https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/87ca29d2-6653-40b3-91e6-41d8283641af)
+
 
 ### 交通工具
 
