@@ -123,7 +123,8 @@ $$
 
 数据集示例如下图所示：
 
-<img src="/Users/naoh/Library/Application Support/typora-user-images/image-20240113215142341.png" alt="image-20240113215142341" style="zoom:40%;" />
+<img width="271" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/71333865-3e3c-4083-a230-d3d520465b2e">
+
 
 ## 项目框架
 
