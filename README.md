@@ -83,7 +83,7 @@ $$
 
 
 
-![image-20240113201540857](/Users/naoh/Library/Application Support/typora-user-images/image-20240113201540857.png)
+<img width="923" alt="image" src="https://github.com/NaOH678/Estimate-Travel-Time/assets/112929756/3fc4e09d-3725-4fdd-9444-e5b10007cb90">
 
 - AVG
 
